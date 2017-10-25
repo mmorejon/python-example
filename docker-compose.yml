@@ -1,8 +1,8 @@
 version: '3.3'
 services:
-  test:
+  api:
     build: .
-    image: quay.io/mmorejon/python-example
+    image: python:testing
     ports:
       - target: 5000
         published: 5000

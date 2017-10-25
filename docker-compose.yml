@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  test:
+    build: .
+    image: quay.io/mmorejon/python-example
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: .
+        target: /code
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/v1/info"]
+      interval: 10s
+      timeout: 3s
+      retries: 3

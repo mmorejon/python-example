@@ -3,8 +3,8 @@ services:
   api:
     image: 192.168.33.22:5000/python:testing
     ports:
-      - target: 80
-        published: 5000
+      - target: 5000
+        published: 80
         protocol: tcp
         mode: host
     healthcheck:

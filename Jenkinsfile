@@ -9,11 +9,15 @@ node {
            userRemoteConfigs: [[url: 'https://github.com/mmorejon/python-example.git']]])
    }
    
-   stage('Build image') {
+   stage('Build Code') {
        sh 'docker image build --tag 192.168.33.22:5000/python:example .'
    }
+
+   stage('Test Code') {
+       echo 'No he creado mis pruebas.'
+   }
    
-   stage('Push image'){
+   stage('Release to Repository'){
        sh 'docker image push 192.168.33.22:5000/python:example'
    }
    

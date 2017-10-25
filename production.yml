@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   api:
-    image: 192.168.33.22:5000/python:testing
+    image: 192.168.33.22:5000/python:example
     ports:
       - target: 5000
         published: 80

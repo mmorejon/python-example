@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home_index():
-    return jsonify({'api_version': '1.1'}), 200
+    return jsonify({'api_version': '1'}), 200
 
 
 if __name__ == "__main__":
